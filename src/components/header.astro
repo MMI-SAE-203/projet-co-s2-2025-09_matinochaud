@@ -1,0 +1,29 @@
+---
+import "../styles/global.css";
+import Logo from "../assets/icon/logo3.png";
+import Produit from "../assets/icon/produit.png";
+import panier from "../assets/icon/Favorite cart.png";
+import compte from "../assets/icon/compte.png";
+import { Image } from "astro:assets";
+---
+
+<header class="bg-[#A46F5E] lg:grid lg:grid-cols-7" >
+
+    <Image class="lg:row-end-1" src={Logo} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <div class="lg:ml-36">
+    <Image class="scale-x-[-1]" src={Produit} alt="image d'une pousse de blé" />
+    <p class="text-white">Produit</p>
+</div>
+<div >
+<h1 class=" lg:col-start-3 text-[#672F3C] text-center  bg-[#FCEDE8] lg:w-144 lg:h-20 lg:rounded-t-4xl">Matin O'chaud</h1>
+</div>
+    <div class="lg:col-start-6">
+    <Image  src={panier} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <p class="text-white">Panier</p>
+</div>
+<div class="lg:col-end-8 ml-24">
+    <Image  src={compte} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <p class="text-white">Mon compte</p>
+</div>
+
+</header>
