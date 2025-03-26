@@ -8,22 +8,36 @@ import { Image } from "astro:assets";
 ---
 
 <header class="bg-[#A46F5E] lg:grid lg:grid-cols-7" >
-
-    <Image class="lg:row-end-1" src={Logo} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
-    <div class="lg:ml-36">
-    <Image class="scale-x-[-1]" src={Produit} alt="image d'une pousse de blé" />
+<div class="flex items-center justify-between  px-4">
+    <Image class="lg:row-end-1 w-36" src={Logo} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <button
+    id="menu-btn"
+    class="group relative z-10 flex h-3 w-6 flex-col justify-between lg:hidden *:block *:ease *:h-0.5 *:w-full *:transform *:rounded-full *:bg-black *:transition *:duration-300"
+    aria-label="Menu"
+    aria-controls="menu"
+    aria-expanded="false"
+  >
+  
+    <span class="group-aria-expanded:translate-y-[5px] group-aria-expanded:rotate-45"></span>
+    <span class="group-aria-expanded:translate-y-[5px] group-aria-expanded:hidden"></span>
+    <span class="group-aria-expanded:-translate-y-[5px] group-aria-expanded:-rotate-45"></span>
+  </button>
+</div>
+    <div class="lg:ml-36 hidden lg:block">
+    <Image class="scale-x-[-1] " src={Produit} alt="image d'une pousse de blé" />
     <p class="text-white">Produit</p>
 </div>
-<div >
-<h1 class=" lg:col-start-3 text-[#672F3C] text-center  bg-[#FCEDE8] lg:w-144 lg:h-20 lg:rounded-t-4xl">Matin O'chaud</h1>
-</div>
-    <div class="lg:col-start-6">
-    <Image  src={panier} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+
+<h1 class=" lg:col-start-3 text-[#672F3C] text-center  lg:bg-[#FCEDE8] lg:w-144 lg:h-20 lg:rounded-t-4xl *ml-24 bg-[#FCEDE8] w-48 h-8 rounded-b-3xl">Matin O'chaud</h1>
+
+    <div class="lg:col-start-6 hidden lg:block">
+    <Image  src={panier} alt="Logo panier" />
     <p class="text-white">Panier</p>
 </div>
-<div class="lg:col-end-8 ml-24">
-    <Image  src={compte} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+<div class="lg:col-end-8 ml-24 hidden lg:block">
+    <Image  src={compte} alt="Logo mon compte" />
     <p class="text-white">Mon compte</p>
 </div>
 
 </header>
+
