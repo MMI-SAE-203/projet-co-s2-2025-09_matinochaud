@@ -1,13 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import fond from "../assets/image/fondlanding.png";
+import fondsm from "../assets/image/fondsm.png";
 import Layout from '../layouts/Layout.astro';
+import bouton from "../assets/image/bouton.png";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-
+    
 </Layout>
-<Image class="w-full " src={fond} alt="fond avec differants pain et viénnoiseries" />
+<div class="lg:grid lg:grid-cols-7">
+
+<Image class="w-full lg:hidden" src={fondsm} alt="fond avec differants pain et viénnoiseries" />
+<Image class="w-full max-sm:hidden lg:absolute lg:top-20 " src={fond} alt="fond avec differants pain et viénnoiseries" />
+<Image class="lg:col-start-4 lg:row-span-5 lg:z-9 scale-75 max-sm:ml-16" src={bouton} alt="bouton inscription" />
+</div>
+
+

@@ -5,9 +5,31 @@ import Produit from "../assets/icon/produit.png";
 import panier from "../assets/icon/Favorite cart.png";
 import compte from "../assets/icon/compte.png";
 import { Image } from "astro:assets";
+const currentPath = Astro.url.pathname;
 ---
 
 <header class="bg-[#A46F5E] lg:grid lg:grid-cols-7" >
+  <nav
+    id="menu"
+    class=" lg:hidden flex-1 px-6 py-12 flex justify-between  flex-col fixed z-10 inset-0 bg-[#A46F5E] visible opacity-100 max-lg:aria-hidden:invisible max-lg:aria-hidden:opacity-0 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100"
+    aria-hidden="true"
+  >
+    <ul class="flex flex-col gap-4 lg:flex-row text-center">
+      <li>
+        <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/produit' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/produit">Produit</a>
+      </li>
+      <li>
+        <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/compte' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/compte">Mon compte</a>
+      </li>
+      <li>
+        <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/panier' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/panier">Panier</a>
+      </li>
+      <li>
+        <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/boulange' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/boulange">Nos boulangeries</a>
+      </li>
+    </ul>
+    
+  </nav>
 <div class="flex items-center justify-between  px-4">
     <Image class="lg:row-end-1 w-36" src={Logo} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
     <button
@@ -28,7 +50,7 @@ import { Image } from "astro:assets";
     <p class="text-white">Produit</p>
 </div>
 
-<h1 class=" lg:col-start-3 text-[#672F3C] text-center  lg:bg-[#FCEDE8] lg:w-144 lg:h-20 lg:rounded-t-4xl *ml-24 bg-[#FCEDE8] w-48 h-8 rounded-b-3xl">Matin O'chaud</h1>
+<h1 class=" lg:col-start-3 text-[#672F3C] text-center  lg:bg-[#FCEDE8] lg:w-144 lg:h-20 lg:rounded-t-4xl max-sm:ml-24 bg-[#FCEDE8] w-48 h-8 max-sm:rounded-b-3xl">Matin O'chaud</h1>
 
     <div class="lg:col-start-6 hidden lg:block">
     <Image  src={panier} alt="Logo panier" />
@@ -41,3 +63,21 @@ import { Image } from "astro:assets";
 
 </header>
 
+<script>
+  // On cible les éléments à modifier
+  const toggle = document.querySelector("#menu-btn");
+  const nav = document.querySelector("#menu");
+  const page = document.body;
+
+  // Vérifier si les éléments existent avant d'ajouter l'événement
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.ariaExpanded === "true";
+      const isClosed = !isOpen;
+      // Mise à jour des attributs ARIA pour accessibilité
+      toggle.ariaExpanded = String(isClosed);
+      nav.ariaHidden = String(isOpen);
+      page.classList.toggle("noscroll", isClosed);
+    });
+  }
+</script>
