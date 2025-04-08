@@ -1,4 +1,13 @@
 ---
 import "../styles/global.css";
-import { Image } from "astro:assets";
+import { Image } from "astro:assets";   
+import LogoE from "../assets/image/LogoE.png";
+import Bouton from "../assets/image/boutoncard.png";
 ---
+
+<div class=" relative  bg-[#8B5461] px-6 py-8  border-[#672F3C] border-8 rounded-4xl space-y-2 w-64 h-136 max-sm:ml-16 lg:col-start-2 mb-24" >
+    <Image class="items-center" src={LogoE} alt="logo matin'ochaud" />
+    <h3 class="text-center text-white">Nos Employés</h3>
+    <p class="text-sm text-white">Chez Matin O'Chaud, nos employés sont au cœur de notre succès. Passionnés par leur métier, ils s'engagent chaque jour à vous offrir des viennoiseries de qualité supérieure. De nos boulangers talentueux à notre équipe de livraison dévouée, chaque membre de notre équipe partage la même passion pour l'artisanat et le service client. Ensemble, nous travaillons pour rendre vos matins plus savoureux et agréables.</p>
+    <Image class="items-center" src={Bouton} alt="Bouton en savoir plus" />
+</div>

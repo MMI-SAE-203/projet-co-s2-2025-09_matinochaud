@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+import Logo from "../assets/icon/logo3.png";
+import Call from "../assets/image/Call.png";
+import Croissant from "../assets/image/Croissant.png";
+import Msg from "../assets/image/Messages.png";
+import X from "../assets/image/X.png";
+import Tiktok from "../assets/image/Tiktok.png";
+import Facebook from "../assets/image/Facebook.png";
+import Instagram from "../assets/image/Instagrame.png";
+import { Image } from "astro:assets";
+---
+<Image class="lg:row-end-1 w-36" src={Logo} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+<h1 class=" lg:col-start-8 text-[#FED59D] text-center  lg:bg-[#A46F5E] lg:w-144 lg:h-20 lg:rounded-t-4xl max-sm:ml-24 bg-[#A46F5E] w-48 h-8 max-sm:rounded-t-3xl">Matin O'chaud</h1>
+<div class="bg-[#A46F5E] lg:grid lg:grid-cols-8 lg:grid-rows-10  text-white max-sm:text-center ">
+   <div class=" col-start-3 row-start-2 flex ">
+    <Image class="max-sm:ml-24 " src={Call} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <h3 class="" >NOUS CONTACTER</h3>
+   </div>
+<div class="col-start-3 row-start-3 row-span-2 ">
+    <p>Email :</p>
+    <p>matinOchaud@gmail.com</p>
+</div>
+<div class="col-start-3 row-start-5 row-span-2 ">
+    <p>Numéro :</p>
+    <p>33+ 07 XX XX XX XX</p>
+</div>
+<div class="col-start-3 row-start-7 ">
+    <p>Centre d’aide : Globale</p>
+   
+</div>
+   <div class=" col-start-5 row-start-2 flex max-sm:mt-8">
+    <Image class="max-sm:ml-34" src={Croissant} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <h3 >À PROPOS</h3>
+   </div>
+   <div class="col-start-5 row-start-3 row-span-4 ">
+    <p>Articles</p>
+    <p>Cookies</p>
+    <p>Accessibilité</p>
+    <p>Nos engagements</p>
+</div>
+
+   <div class=" col-start-7 row-start-2 flex max-sm:mt-8">
+    <Image class="max-sm:ml-40" src={Msg} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    <h3 >AIDE</h3>
+   </div>
+
+    <div class="col-start-7 row-start-3 row-span-7 col-span-2 ">
+        <p>Mon compte</p>
+        <p>FAQ</p>
+        <p>Livraisons</p>
+        <p>Conditions générales de ventes</p>
+        <p>Conditions d’utilisation</p>
+        <p>Politique de confidentialité</p>
+        <p>Gestion des cookies</p>
+    </div>
+    <div class="col-start-5 row-start-10 flex col-span-2 max-sm:ml-30 mt-8">
+        <Image class="" src={X} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+        <Image class="ml-4" src={Tiktok} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+        <Image class="ml-4" src={Facebook} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+        <Image class="ml-4" src={Instagram} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    </div>
+</div>

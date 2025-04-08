@@ -1,0 +1,13 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";   
+import LogoC from "../assets/image/LogoC.png";
+import Bouton from "../assets/image/boutoncard.png";
+---
+
+<div class=" relative  bg-[#8B5461] px-6 py-8  border-[#672F3C] border-8 rounded-4xl space-y-2 w-64 h-139 max-sm:ml-16 lg:col-start-6 mb-24" >
+    <Image class="items-center" src={LogoC} alt="logo matin'ochaud" />
+    <h3 class="text-center">Notre camionette</h3>
+    <p class="text-sm">Notre engagement envers l'environnement se reflète dans notre choix de livraison. Nous utilisons une camionnette hybride pour réduire notre empreinte carbone et limiter la pollution urbaine. Grâce à notre logistique optimisée, nous vous assurons des livraisons ponctuelles tout en prenant soin de notre planète. Avec Matin O'Chaud, profitez de viennoiseries fraîches et savoureuses, livrées de manière responsable.</p>
+    <Image class="items-center" src={Bouton} alt="Bouton en savoir plus" />
+</div>
