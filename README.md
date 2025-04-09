@@ -3,12 +3,12 @@
 
 Éléménts à renseigner pour la soutenance :
 
-- [ ] Nom du projet :
+- [ ] Nom du projet : Matin O'chaud
 - [ ] URL de la landing page :
 - [ ] URL de l'application finale :
-- [ ] URL de connexion au back office :
-- [ ] Identifiant de connexion au backoffice :
-- [ ] Mot de passe de connexion au backoffice :
+- [ ] URL de connexion au back office : https://matinochaudpb.breuil-kilian.fr/_/
+- [ ] Identifiant de connexion au backoffice : kilian.breuil@edu.univ-fcomte.fr
+- [ ] Mot de passe de connexion au backoffice : Kl99ir58&*
 - [ ] URL de la maquette FIGMA :
 - [ ] Description du projet :
 
