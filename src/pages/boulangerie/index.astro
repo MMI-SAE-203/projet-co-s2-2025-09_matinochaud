@@ -1,7 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import { Image } from "astro:assets";
+import map from "../../assets/image/map.png";
+
 ---
 
 <Layout>
     <h1 class="text-center text-[#8B5461]">Nos boulangeries</h1>
+    <Image class="w-full" src={map} alt="fond avec differants pain et viénnoiseries" />
 </Layout>
