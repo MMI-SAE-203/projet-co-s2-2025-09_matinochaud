@@ -25,13 +25,15 @@ const currentPath = Astro.url.pathname;
         <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/panier' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/panier">Panier</a>
       </li>
       <li>
-        <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/boulange' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/boulange">Nos boulangeries</a>
+        <a class={`block p-4 rounded-lg text-[#FCEDE8] ${currentPath === '/boulange' ? 'text-red-600 font-bold max-lg:bg-orange-300 max-lg:rounded-lg' : ''}`} href="/boulangerie">Nos boulangeries</a>
       </li>
     </ul>
     
   </nav>
 <div class="flex items-center justify-between  px-4">
+  <a href="/">
     <Image class="lg:row-end-1 w-36" src={Logo} alt="Logo Matin O'chaud avec trois camionette transportant une baguette" />
+    </a>
     <button
     id="menu-btn"
     class="group relative z-10 flex h-3 w-6 flex-col justify-between lg:hidden *:block *:ease *:h-0.5 *:w-full *:transform *:rounded-full *:bg-black *:transition *:duration-300"
@@ -46,15 +48,19 @@ const currentPath = Astro.url.pathname;
   </button>
 </div>
     <div class="lg:ml-36 hidden lg:block">
+      <a href="/produit">
     <Image class="scale-x-[-1] " src={Produit} alt="image d'une pousse de blé" />
     <p class="text-white">Produit</p>
+    </a>
 </div>
 
 <h1 class=" lg:col-start-3 text-[#672F3C] text-center  lg:bg-[#FCEDE8] lg:w-144 lg:h-20 lg:rounded-t-4xl max-sm:ml-24 bg-[#FCEDE8] w-48 h-8 max-sm:rounded-b-3xl">Matin O'chaud</h1>
 
     <div class="lg:col-start-6 hidden lg:block">
+      <a href="/panier">
     <Image  src={panier} alt="Logo panier" />
     <p class="text-white">Panier</p>
+    </a>
 </div>
 <div class="lg:col-end-8 ml-24 hidden lg:block">
     <Image  src={compte} alt="Logo mon compte" />
