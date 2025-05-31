@@ -1,0 +1,16 @@
+---
+import "../styles/global.css";
+import { Image } from "astro:assets";   
+import LogoB from "../assets/image/LogoB.png";
+import Bouton from "../assets/image/boutoncard.png";
+
+---
+
+<div class=" relative  bg-[#D5AFA2] px-6 py-8  border-[#A46F5E] border-8 rounded-4xl space-y-2 w-64 h-139 max-sm:ml-16 lg:col-start-4 mb-24" >
+    <Image class="items-center" src={LogoB} alt="logo matin'ochaud" />
+    <h3 class="text-center">Nos boulangerie</h3>
+    <p class="text-sm">Nous sommes fiers de collaborer avec des boulangeries locales qui partagent notre engagement envers la qualité et l'authenticité. Chaque matin, nos partenaires boulangers préparent avec soin des viennoiseries artisanales à partir d'ingrédients frais et locaux. En soutenant ces artisans, nous vous garantissons des produits délicieux et contribuez à l'économie de notre ville.</p>
+    <a href="/boulangerie">
+    <Image class="items-center" src={Bouton} alt="Bouton en savoir plus" />
+    </a>
+</div>

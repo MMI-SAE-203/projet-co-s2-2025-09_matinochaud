@@ -4,12 +4,12 @@ import fond from "../assets/image/fondlanding.png";
 import fondsm from "../assets/image/fondsm.png";
 import Layout from '../layouts/Layout.astro';
 import bouton from "../assets/image/bouton.png";
-import Cardl from "../components/cardl.astro";
-import Cardl2 from "../components/cardl2.astro";
-import Cardl3 from "../components/cardl3.astro";
 import camion from "../assets/image/camion.png";
 import Trans from "../assets/image/trans.png";
 import imgpain from "../assets/image/imgland.png"
+import Employe from "../components/employe.astro";
+import Boulangerie from "../components/boulangerie.astro";
+import Camionette from "../components/camionette.astro";
 
 ---
 
@@ -33,9 +33,9 @@ import imgpain from "../assets/image/imgland.png"
 <h2 class="text-center p-12 text-[#8B5461]">Qui sommes nous ?</h2>
 <div class="lg:grid lg:grid-cols-7">
    
-<Cardl />
-<Cardl2 />
-<Cardl3 />
+<Employe />
+<Boulangerie />
+<Camionette />
 </div>  
 <Image class="w-full " src={Trans} alt="" />
 <div class="lg:grid lg:grid-cols-3 grid-rows-2">
