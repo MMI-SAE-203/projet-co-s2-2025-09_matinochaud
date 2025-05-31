@@ -1,0 +1,24 @@
+---
+import Image from "astro/components/Image.astro";
+import ImgPb from "./ImgPb.astro";
+const {...articles} = Astro.props;
+
+---
+
+<article>
+    <a href={`/produit/${articles.id}`}>
+    <ImgPb
+        record={articles}
+        field="imgUrl"
+        alt={articles.name}
+        classPicture="w-full h-64 object-cover"
+        classImg="w-full h-full object-cover"/>
+    </a>
+    <div
+              class="relative px-6 py-4 space-y-2"
+    >
+      <p class=" font-semibold py-2 flex justify-center items-center">
+        <a class="text-black" href={`/Programmefilm/${articles.id}`}>{articles.nom_article}</a>
+      </p>
+    </div>
+</article>

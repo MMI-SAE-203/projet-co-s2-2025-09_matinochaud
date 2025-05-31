@@ -2,51 +2,51 @@ import PocketBase from 'pocketbase';
 export const pb = new PocketBase("https://matinochaudpb.breuil-kilian.fr/_/")
 
 export async function getAllarticles() {
-    const records = await pb.collection('article').getFullList() ;
-    return records;
+    const getAllarticles = await pb.collection('article').getFullList() ;
+    return getAllarticles;
 }
 
 export async function getArticleById(id) {
-    const record = await pb.collection('article').getOne(id) ;
-    return record;
+    const getOnearticle = await pb.collection('article').getOne(id) ;
+    return getOnearticle;
 }
 
 export async function getAllboulangerie() {
-    const records = await pb.collection('boulangerie').getFullList() ;
-    return records;
+    const getAllboulangerie = await pb.collection('boulangerie').getFullList() ;
+    return getAllboulangerie;
 }
 
 export async function getBoulangerieById(id) {
-    const record = await pb.collection('boulangerie').getOne(id) ;
-    return record;
+    const getBoulangerieById = await pb.collection('boulangerie').getOne(id) ;
+    return getBoulangerieById;
 }
 
 export async function getAllarticlesbycategorie(categorie) {
-    const records = await pb.collection('article').getFullList({
+    const getAllarticlesbyboulangerie = await pb.collection('article').getFullList({
         filter: `categorie = "${categorie}"`,
     }) ;
-    return records;
+    return getAllarticlesbyboulangerie;
 }
 
 export async function getAllarticlesbygout(gout) {
-    const records = await pb.collection('article').getFullList({
+    const getgout = await pb.collection('article').getFullList({
         filter: `gout = "${gout}"`,
     }) ;
-    return records;
+    return getgout;
 }
 
 export async function getAllarticlesbyboulangerie(boulangerie) {
-    const records = await pb.collection('article').getFullList({
+    const articlebyboulangerie = await pb.collection('article').getFullList({
         filter: `articleboulnagerie = "${boulangerie}"`,
     }) ;
-    return records;
+    return articlebyboulangerie;
 }
 
 export async function getAllarticlesbydisponibilite(disponibilite) {
-    const records = await pb.collection('article').getFullList({
+    const articlesbydisponibilite = await pb.collection('article').getFullList({
         filter: `disponibilite = "${disponibilite}"`,
     }) ;
-    return records;
+    return articlesbydisponibilite;
 }
 
 export async function getAllarticlesbyindisponibilite(indisponibilite) {

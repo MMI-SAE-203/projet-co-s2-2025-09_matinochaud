@@ -1,7 +1,20 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import Cardarticle from "../../components/cardarticle.astro"
+import { getAllarticles } from "../../../backend/backend.mjs"
+const article = await getAllarticles()
 ---
 
 <Layout>
     <h1 class="text-center text-[#8B5461]">Liste des articles</h1>
+
+    <div>
+        {article.length > 0 ? (
+                    article.map((article) => (
+            <Cardarticle {...article} />
+        ))
+        ) : (
+            <p class="text-center text-gray-500">Aucun article trouvé.</p>
+        )}
+    </div>
 </Layout>
