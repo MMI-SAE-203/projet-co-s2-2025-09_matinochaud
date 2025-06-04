@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase';
 export const pb = new PocketBase("https://matinochaudpb.breuil-kilian.fr/_/")
 
-export async function getAllarticles() {
+export async function getAllarticle() {
     const getAllarticles = await pb.collection('article').getFullList() ;
     return getAllarticles;
 }
