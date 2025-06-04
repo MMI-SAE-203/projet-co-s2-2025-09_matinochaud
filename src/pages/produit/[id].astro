@@ -1,7 +1,15 @@
 ---
+import ImgPb from '../../components/ImgPb.astro'
 import Layout from "../../layouts/Layout.astro"
+const {... produit} = Astro.props;
 ---
 
 <Layout>
     <h1 class="text-center text-[#8B5461]">Pages des articles</h1>
+    <ImgPb
+        record={produit}
+        field="image"
+        alt={produit.nom}
+        classPicture="w-full h-full"
+        classImg="object-cover w-full h-full"/>
 </Layout>

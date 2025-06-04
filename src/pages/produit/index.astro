@@ -8,13 +8,22 @@ const articles = await getAllarticle()
 <Layout>
     <h1 class="text-center text-[#8B5461]">Liste des articles</h1>
 
-    <div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-0.5">
         {articles.length > 0 ? (
-                    articles.map((allarticle) => (
+            articles.map((allarticle) => (
             <Cardarticle {...allarticle} />
         ))
         ) : (
             <p class="text-center text-gray-500">Aucun article trouvé.</p>
         )}
     </div>
+    <div class="flex justify-center items-center gap-2">
+        <p class="bg-[#672F3C] border-3 border-[#672F3C] rounded-full">1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>...</p>
+        <p>12</p>
+
+    </div>
 </Layout>
+
