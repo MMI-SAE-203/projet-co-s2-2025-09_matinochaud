@@ -42,14 +42,12 @@ import mappadre from "../../assets/image/mappadre.png";
         <div class="flex items-baseline space-x-2 mt-2">
           <h3 class="text-lg font-semibold">{produit.prix_article_groupe}€</h3>
           <p class="text-sm text-[#672F3C]">{produit.offre_groupe}</p>
-          <p class="text-sm text-[#672F3C]">{produit.churros_sucre}</p>
+          <p class="text-sm text-[#672F3C]">{produit.churros_nutella}</p>
         </div>
 
         <p class="mt-4 text-sm text-black">{produit.description}</p>
-
-        <h3 class="mt-4 font-semibold">Disponible</h3>
+        <h3 class="mt-4 font-semibold">Quantité disponible : {produit.quantite > 0 ? produit.quantite : "Indisponible"}</h3>
       </div>
-
       <Image
         class="scale-100 w-48 mt-6"
         src={boutonpanier}
@@ -57,7 +55,7 @@ import mappadre from "../../assets/image/mappadre.png";
       />
     </div>
 
-    {/* Colonne 3 : Map et adresse */}
+
     <div class="mt-8 lg:mt-0">
       <h2 class="text-xl font-semibold mb-4">La Fournée du Padre</h2>
       <Image
