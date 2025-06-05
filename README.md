@@ -4,8 +4,8 @@
 Éléménts à renseigner pour la soutenance :
 
 - [ ] Nom du projet : Matin O'chaud
-- [ ] URL de la landing page :
-- [ ] URL de l'application finale :
+- [ ] URL de la landing page :https://matinochaud.breuil-kilian.fr/
+- [ ] URL de l'application finale :https://matinochaud.breuil-kilian.fr/ 
 - [ ] URL de connexion au back office : https://matinochaudpb.breuil-kilian.fr/_/
 - [ ] Identifiant de connexion au backoffice : kilian.breuil@edu.univ-fcomte.fr
 - [ ] Mot de passe de connexion au backoffice : Kl99ir58&*
