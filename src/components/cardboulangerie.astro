@@ -1,0 +1,54 @@
+---
+import Image from "astro/components/Image.astro";
+import ImgPb from "./ImgPb.astro";
+import panier from "../assets/icon/Favorite cart.png";
+import iconeping from "../assets/image/iconeping.png";
+import tel from "../assets/image/tel.png";
+import horloge from "../assets/image/horloge.png";
+import { Image } from "astro:assets";
+const { ...boulangerie} = Astro.props;
+
+---
+
+<article class="bg-[#D5AFA2] rounded-2xl ">
+    <a href={`/boualngerie/${boulangerie.id}`}>
+      <div class="w-65 h-60 rounded-lg max-w-xl mx-auto px-6 py-4  items-center text-center">
+        <ImgPb
+      record={boulangerie}
+      field="image"
+      alt={boulangerie.nom}
+      classPicture="w-full h-full"
+      classImg="object-cover w-full h-full"
+      /></div>
+    </a>
+    <div class="relative px-6 py-4 space-y-2"
+    >
+      <p class=" font-semibold py-2 flex justify-center items-center">
+        <a class="text-black decoration-0 text-4xl" href={`/boulangerie/${boulangerie.id}`}>{boulangerie.nom_boulangerie}</a>
+      </p>
+    </div>
+    <div class="ml-8">
+    <div class="flex items-baseline space-x-2 mt-4 ">
+        <Image src={iconeping} alt="icone de position"/>
+        <h2>Adresse</h2>
+        </div>
+   <p class="text-black text-2xl ml-8">  <span >{boulangerie.adresse_boulangerie} </span> </p>
+   <div class="flex items-baseline space-x-2 mt-4">
+   <Image src={tel} alt="icone de telephone"/>
+   <h2>Numéro</h2>
+    </div>
+    <p class="text-black text-2xl ml-8">  <span >{boulangerie.numero_boulangerie} </span> </p>
+       <div class="flex items-baseline space-x-2 mt-4">
+   <Image src={horloge} alt="icone d'horloge"/>
+   <h2>Horaires</h2>
+    </div>
+    <p>
+      Lundi au Vendredi
+    </p>
+    <h3 class="text-black text-2xl ml-8">  <span >0{boulangerie.horaires_semaine} </span> </h3>
+        <p>
+      Samedi
+    </p>
+    <h3 class="text-black text-2xl ml-8">  <span >0{boulangerie.horaires_samedi} </span> </h3>
+  </div>
+</article>

@@ -2,10 +2,21 @@
 import Layout from "../../layouts/Layout.astro"
 import { Image } from "astro:assets";
 import map from "../../assets/image/map.png";
-
+import { getAllboulangerie } from "../../../backend/backend.mjs";
+import Cardboulangerie from "../../components/cardboulangerie.astro";
+const boulangeries = await getAllboulangerie()
 ---
 
 <Layout>
     <h1 class="text-center text-[#8B5461]">Nos boulangeries</h1>
     <Image class="w-full" src={map} alt="fond avec differants pain et viénnoiseries" />
+   <div class="col-span-2 grid grid-cols-3 gap-8">
+        {boulangeries.length > 0 ? (
+            boulangeries.map((allboulangerie) => (
+            <Cardboulangerie {...allboulangerie} />
+        ))
+        ) : (
+            <p class="text-center text-gray-500">Aucun article trouvé.</p>
+        )}
+    </div>
 </Layout>

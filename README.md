@@ -9,14 +9,14 @@
 - [ ] URL de connexion au back office : https://matinochaudpb.breuil-kilian.fr/_/
 - [ ] Identifiant de connexion au backoffice : kilian.breuil@edu.univ-fcomte.fr
 - [ ] Mot de passe de connexion au backoffice : Kl99ir58&*
-- [ ] URL de la maquette FIGMA :
+- [ ] URL de la maquette FIGMA : https://www.figma.com/design/LcYyXfdSad5Kh0zdJ2XboJ/persona_S2?node-id=7023-16&t=TQhOOXBHR0i73igp-1
 - [ ] Description du projet :
 
 ## 🚀 Équipe
 
 | Étudiants    | Prénom NOM  |
 | :----------- | :---------- |
-| Étudiant 1   | à compléter |
-| Étudiant 2   | à compléter |
-| Étudiant 3   | à compléter |
+| Étudiant 1   | Estelle COULON |
+| Étudiant 2   | Kilian BREUIL|
+| Étudiant 3   | Théo ARALDI |
 | (Étudiant 4) | à compléter |
