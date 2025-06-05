@@ -1,5 +1,5 @@
 import PocketBase from 'pocketbase';
-export const pb = new PocketBase("https://matinochaudpb.breuil-kilian.fr:443")
+export const pb = new PocketBase("https://matinochaudpb.breuil-kilian.fr")
 
 
 
