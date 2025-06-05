@@ -19,14 +19,15 @@ const { ...produit} = Astro.props;
       classImg="object-cover w-full h-full"
       /></div>
     </a>
-   <p class="text-black text-2xl ">  <span >{produit.prix_article_unite} </span>€ à l’unité {produit.churros_sucre} </p>
-   <p class="text-black text-2xl ">  <span >{produit.prix_article_groupe} </span>{produit.offre_groupe} {produit.churros_nutella}</p>
     <div class="relative px-6 py-4 space-y-2"
     >
       <p class=" font-semibold py-2 flex justify-center items-center">
-        <a class="text-black" href={`/produit/${produit.id}`}>{produit.nom_article}</a>
+        <a class="text-black decoration-0 text-4xl" href={`/produit/${produit.id}`}>{produit.nom_article}</a>
       </p>
     </div>
+   <p class="text-black text-2xl ml-8">  <span >{produit.prix_article_unite} </span>€ à l’unité {produit.churros_sucre} </p>
+   <p class="text-black text-2xl ml-8">  <span >{produit.prix_article_groupe} </span>€ {produit.offre_groupe} {produit.churros_nutella}</p>
+    
     <Image class="ml-96 text-black " src={panier} alt="Logo panier" />
     <p class="pl-4 pb-4">Disponible</p>
     
