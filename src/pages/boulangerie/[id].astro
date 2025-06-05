@@ -1,0 +1,62 @@
+---
+import ImgPb from '../../components/ImgPb.astro'
+import Layout from "../../layouts/Layout.astro"
+import { getBoulangerieById } from '../../../backend/backend.mjs';
+const {id} = Astro.params;
+const getOneArticle = await getBoulangerieById(id)
+const {... boulangerie} = getOneArticle;
+import { Image } from "astro:assets";
+import boutonpanier from "../../assets/image/boutonpanier.png";
+import mappadre from "../../assets/image/mappadre.png";
+---
+ <div class="bg-[#672F3C]">
+<Layout>
+   <div class="bg-[#FCEDE8] rounded-lg w-300 h-150 ml-42">
+  <a href="./">
+    <p class="text-[#8B5461] underline underline-offset-1 ml-20 mt-10">
+      Retour aux articles
+    </p>
+  </a>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-10">
+    <div>
+      <h2 class="text-2xl font-bold mb-4">{boulangerie.nom_boulangerie}</h2>
+      <div class="w-full h-72 rounded-lg overflow-hidden">
+        <ImgPb
+          record={boulangerie}
+          field="image"
+          alt={boulangerie.nom}
+          classPicture="w-full h-full"
+          classImg="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-between">
+      <div>
+        <div class="flex items-baseline space-x-2 mt-4">
+          <h3 class="text-lg font-semibold">{boulangerie.prix_article_unite}€</h3>
+          <p class="text-sm text-[#672F3C]">à l'unité</p>
+        </div>
+
+
+<div class="flex flex-row justify-between items-start gap-">
+        <p class="mt-4 text-sm text-black">{boulangerie.description_boulangerie}</p>
+</div>
+
+
+    <div class="mt-8 lg:mt-0">
+      <h2 class="text-xl font-semibold mb-4">{boulangerie.nom_boulangerie}</h2>
+      <Image
+        src={mappadre}
+        alt="map de la boulangerie"
+        class="rounded-md"
+      />
+      <h3 class="mt-2 text-sm text-black">
+        4 Rue Dr Albert Schweitzer, 90000 Belfort
+      </h3>
+    </div>
+  </div>
+</div>
+</Layout>
+</div>
