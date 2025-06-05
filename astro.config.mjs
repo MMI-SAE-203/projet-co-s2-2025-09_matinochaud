@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 import alpinejs from '@astrojs/alpinejs';
 
 import react from '@astrojs/react';
+import mod from 'astro/zod';
+import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,6 +15,7 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   output: "server",
-  experimental: { svg: true },
+  adapter: node({mode: 'standalone'}),
+  experimental: { svg: true, session: true },
   integrations: [alpinejs(), react()]
 });
