@@ -1,17 +1,26 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import { Image } from "astro:assets";
+import prod from "../../assets/image/prod.png";
+import prod1 from "../../assets/image/prod1.png";
+import prod2 from "../../assets/image/prod2.png";
+import prix from "../../assets/image/prix.png";
 ---
 
 <Layout>
     <h1 class="text-center text-[#8B5461] mb-16">Panier</h1>
     <div class="grid grid-cols-3">
-    <div class=" relative bg-[#8B5461] opacity-50 px-6 py-8  rounded-2xl h-24 col-start-1 col-span-2 mb-12" >
+         <Image class="col-start-3 row-start-1 ml-20" src={prix} alt="logo de cube de sucre" />
+    <div class=" relative bg-[#8B5461]  px-6 py-8  rounded-2xl h-24 col-start-1 col-span-2 mb-12" >
         <h2 class="text-black font-black">TOUS LES PRODUITS</h2>
 </div>
-<div class=" relative bg-[#8B5461] opacity-50 px-6 py-8  rounded-2xl h-120 col-start-1 col-span-2 mb-12" >
+<div class=" relative bg-[#8B5461]  px-6 py-8  rounded-2xl h-120 col-start-1 col-span-2 mb-12" >
         <h2 class="text-black font-black">La Fournée du Padre</h2>
+    <Image class="opacity-100 mb-8" src={prod} alt="logo de cube de sucre" />
+    <Image class="opacity-100" src={prod1} alt="logo de cube de sucre" />
 </div>
-<div class=" relative bg-[#8B5461] opacity-50 px-6 py-8  rounded-2xl h-72 col-start-1 col-span-2 mb-12" >
+<div class=" relative bg-[#8B5461]  px-6 py-8  rounded-2xl h-72 col-start-1 col-span-2 mb-12" >
         <h2 class="text-black font-black">Terroir des pains</h2>
+        <Image class="opacity-100" src={prod2} alt="logo de cube de sucre" />
     </div>
 </Layout>
