@@ -2,13 +2,45 @@
 import Layout from "../../layouts/Layout.astro"
 import Cardarticle from "../../components/cardarticle.astro"
 import { getAllarticle } from "../../../backend/backend.mjs"
+import filtre from "../../assets/image/filtres.png";
+import croissant from "../../assets/image/French Croissant.png";
+import pain from "../../assets/image/Bread.png";
+import sucre from "../../assets/image/Sugar Cubes.png";
+import sel from "../../assets/image/Spoon of Sugar.png";
+import indispo from "../../assets/image/Square 90.png";
+import dispo from "../../assets/image/Checked Checkbox.png";
+import { Image } from "astro:assets";
 const articles = await getAllarticle()
 ---
 
 <Layout>
     <h1 class="text-center text-[#8B5461]">Liste des articles</h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-0.5">
+<div class="grid grid-cols-3 gap-4">
+     <div class="ml-16">
+       <Image class="mb-8" src={filtre} alt="filtre" />
+       <h2 class="text-[#672F3C] mb-8">Catégorie</h2>
+       <div class="flex space-x-2">
+  <Image src={croissant} alt="logo de croissant" /><span>Viennoiserie</span>
+  </div>
+  <div class="flex space-x-2">
+  <Image class="mb-4" src={pain} alt="logo de pain" /><span>pain</span>
+  </div>
+   <h2 class="text-[#672F3C] mb-8">Goût</h2>
+   <div class="flex space-x-2">
+  <Image src={sucre} alt="logo de cube de sucre" /><span>Sucré</span>
+  </div>
+  <div class="flex space-x-2">
+  <Image class="mb-4" src={sel} alt="logo de sel" /><span>Salé</span>
+  </div>
+  <h2 class="text-[#672F3C] mb-8">Disponibilité</h2>
+   <div class="flex space-x-2">
+  <Image src={dispo} alt="checkbox check" /><span>Disponible</span>
+  </div>
+  <div class="flex space-x-2">
+  <Image class="mb-4" src={indispo} alt="checkbox vide" /><span>Indisponible</span>
+  </div>
+  </div>
+    <div class="col-span-2 grid grid-cols-2 gap-8">
         {articles.length > 0 ? (
             articles.map((allarticle) => (
             <Cardarticle {...allarticle} />
@@ -16,6 +48,7 @@ const articles = await getAllarticle()
         ) : (
             <p class="text-center text-gray-500">Aucun article trouvé.</p>
         )}
+    </div>
     </div>
     <div class="flex justify-center items-center gap-2">
         <p class="bg-[#672F3C] border-3 border-[#672F3C] rounded-full">1</p>

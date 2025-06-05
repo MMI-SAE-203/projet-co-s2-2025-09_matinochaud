@@ -2,14 +2,15 @@
 import Image from "astro/components/Image.astro";
 import ImgPb from "./ImgPb.astro";
 import Doublel from '../assets/image/doublel.png';
-
+import panier from "../assets/icon/Favorite cart.png";
+import { Image } from "astro:assets";
 const { ...produit} = Astro.props;
 
 ---
 
-<article class="bg-[#D5AFA2]">
+<article class="bg-[#D5AFA2] rounded-2xl">
     <a href={`/produit/${produit.id}`}>
-      <div class="w-65 h-60 max-w-xl mx-auto px-6 py-4 rounded-lg items-center text-center">
+      <div class="w-65 h-60 rounded-lg max-w-xl mx-auto px-6 py-4  items-center text-center">
         <ImgPb
       record={produit}
       field="image"
@@ -18,10 +19,15 @@ const { ...produit} = Astro.props;
       classImg="object-cover w-full h-full"
       /></div>
     </a>
+   <p class="text-black text-2xl ">  <span >{produit.prix_article_unite} </span>€ à l’unité {produit.churros_sucre} </p>
+   <p class="text-black text-2xl ">  <span >{produit.prix_article_groupe} </span>{produit.offre_groupe} {produit.churros_nutella}</p>
     <div class="relative px-6 py-4 space-y-2"
     >
       <p class=" font-semibold py-2 flex justify-center items-center">
         <a class="text-black" href={`/produit/${produit.id}`}>{produit.nom_article}</a>
       </p>
     </div>
+    <Image class="ml-96 text-black " src={panier} alt="Logo panier" />
+    <p class="pl-4 pb-4">Disponible</p>
+    
 </article>
